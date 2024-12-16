@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="panel">
+      <h1>Auto printer</h2>
+      <p>Impression automatique depuis un navigateur web destiné à une imprimante thermique de 72mm.</p>
+      <button id="printing-ticket-button">PRINT</button>
+      <button id="toggle-ticket-visibility">TOGGLE VISIBILITY</button>
+      <div class="explication">
+        Solution trouvée ici : <a href="https://stackoverflow.com/a/70289151" target="_blank">https://stackoverflow.com/a/70289151</a> <br>
+
+        Pour déclencher une impression à partir de JavaScript, il existe la fonction native `window.print()`. 
+        Cette fonction ouvre une fenêtre de dialogue d'impression du navigateur, permettant de configurer l'imprimante (par exemple, retirer les marges par défaut). Une fois correctement configurée, nous pouvons modifier une option par défaut du navigateur (en l'occurrence Firefox) pour supprimer la fenêtre de dialogue d'impression et imprimer directement le document en utilisant l'option `silent_print`.
+        <br><br>
+        Ensuite, la requête de média CSS `@media print` nous permet d'appliquer un style uniquement lors de l'impression. Cela nous permet de masquer le contenu de la page, sauf pour l'élément à imprimer.
+      </div>
+    </div>
+
+    <div id="print-container">
+      <h2>Ticket :</h2>
+      <div id="section-to-print">
+        <div>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, sit repudiandae nulla dolore similique doloribus laboriosam eveniet quibusdam dicta, velit exercitationem. Ducimus quam possimus totam laborum neque dicta nesciunt odio.
+    
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, sit repudiandae nulla dolore similique doloribus laboriosam eveniet quibusdam dicta, velit exercitationem. Ducimus quam possimus totam laborum neque dicta nesciunt odio.
+    
+          
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, sit repudiandae nulla dolore similique doloribus laboriosam eveniet quibusdam dicta, velit exercitationem. Ducimus quam possimus totam laborum neque dicta nesciunt odio.
+    
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, sit repudiandae nulla dolore similique doloribus laboriosam eveniet quibusdam dicta, velit exercitationem. Ducimus quam possimus totam laborum neque dicta nesciunt odio.
+    
+        </div>
+    
+        <img src="./public/b43.jpg" alt="">
+        <div>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, sit repudiandae nulla dolore similique doloribus laboriosam eveniet quibusdam dicta, velit exercitationem. Ducimus quam possimus totam laborum neque dicta nesciunt odio.
+    
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, sit repudiandae nulla dolore similique doloribus laboriosam eveniet quibusdam dicta, velit exercitationem. Ducimus quam possimus totam laborum neque dicta nesciunt odio.
+    
+          
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, sit repudiandae nulla dolore similique doloribus laboriosam eveniet quibusdam dicta, velit exercitationem. Ducimus quam possimus totam laborum neque dicta nesciunt odio.
+    
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, sit repudiandae nulla dolore similique doloribus laboriosam eveniet quibusdam dicta, velit exercitationem. Ducimus quam possimus totam laborum neque dicta nesciunt odio.
+    
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
